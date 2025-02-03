@@ -26,6 +26,7 @@ export const Styles = {
     marginTop: '0.5rem',
     fontSize: '1rem',
     minHeight: '80px',
+    resize: 'none'
   },
   button: {
     padding: '0.5rem 1rem',

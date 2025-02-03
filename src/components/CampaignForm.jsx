@@ -1,3 +1,5 @@
+import CampaignSaver from './CampaignSaver.jsx';
+
 import React, { useState } from "react";
 import { Styles } from "./Styles.js";
 
@@ -17,6 +19,7 @@ export default function CampaignForm({ addCampaign }) {
     addCampaign(newCampaign);
     setName("");
     setDescription("");
+    console.log(JSON.stringify(newCampaign));
   };
 
   return (
@@ -40,9 +43,16 @@ export default function CampaignForm({ addCampaign }) {
           style={Styles.textarea}
         />
       </div>
+      {/* 
       <button type="submit" style={Styles.button}>
         Add Campaign
-      </button>
+      </button> 
+      */}
+      <CampaignSaver
+        campaign={addCampaign}
+        onSaveSuccess={handleSubmit}
+      //onError={handleError}
+      />
     </form>
   );
 }

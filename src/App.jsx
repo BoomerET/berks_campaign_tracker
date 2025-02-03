@@ -3,6 +3,7 @@ import { Styles } from "./components/Styles.js";
 import CampaignDetail from "./components/CampaignDetail.jsx";
 import CampaignForm from "./components/CampaignForm.jsx";
 import CampaignList from "./components/CampaignList.jsx";
+//import Sessions from "./components/Sessions.jsx";
 
 // Main App component managing state for campaigns and sessions
 function App() {
@@ -50,9 +51,9 @@ function App() {
       campaigns.map((campaign) =>
         campaign.id === campaignId
           ? {
-              ...campaign,
-              sessions: campaign.sessions.filter((s) => s.id !== sessionId),
-            }
+            ...campaign,
+            sessions: campaign.sessions.filter((s) => s.id !== sessionId),
+          }
           : campaign
       )
     );
